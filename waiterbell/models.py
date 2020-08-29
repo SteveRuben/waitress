@@ -28,14 +28,16 @@ class Business(models.Model):
     state = models.IntegerField(default=0)
     created_date = models.DateTimeField('date published')
 
-class Review(models.Model):
-     class EYesNo(models.TextChoices):
-        YES = 'YES', _('Yes')
-        NO = 'NO', _('No')
 
+
+
+class Review(models.Model):
+    class EYesNo(models.TextChoices):
+        YES = 'YES'
+        NO = 'NO'
     title = models.CharField(max_length=200)
     body = models.CharField(max_length=200)
-    recommend = models.CharField( max_length=2, choices=EYesNo.choices, default=EYesNo.YES)
+    recommend = models.CharField( max_length=3, choices=EYesNo.choices, default=EYesNo.YES)
     approved = models.IntegerField(default=0)
     state = models.IntegerField(default=0)
     created_date = models.DateTimeField('date published')

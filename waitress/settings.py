@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'waiterbell.apps.WaiterbellConfig',
     'django.contrib.admin',
     'django.contrib.auth',
